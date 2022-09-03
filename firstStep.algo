@@ -1,0 +1,26 @@
+ALGORITHM sentence_operations
+VAR
+    sentence : STRING := 'la plus simple phrase pour tester.';
+    vowels : STRING := 'aeiou';
+    i : INTEGER;
+    j : INTEGER;
+    nbr_words : INTEGER := 0;
+    nbr_vowels : INTEGER := 0;
+    
+BEGIN
+
+    FOR i FROM 0 TO phrase.length-1 STEP 1  DO
+    IF( i=' ' OR i<>'.' )
+    nbr_words := nbr_words+1 ;
+   END_IF
+   END_FOR
+
+   FOR i FROM 0 TO sentence.length-1 STEP 1  DO
+   FOR j FROM 0 TO vowels.length-1 STEP 1  DO
+   IF(sentence[i]=vowels[j])THEN
+   nbr_vowels:= nbr_vowels+1 ;
+   END_IF
+   END_FOR
+   END_FOR
+
+END
