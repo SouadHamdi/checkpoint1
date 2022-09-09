@@ -1,0 +1,25 @@
+ALGORITHM sum_distinct(set1,set2)
+VAR
+set1:array
+set2:array;
+    i : INTEGER;
+    j : INTEGER;
+    sum : INTEGER := 0;
+BEGIN
+
+   FOR i FROM 0 TO set1.length-1 STEP 1  DO
+   FOR j FROM i TO set2.length-1 STEP 1  DO
+   IF(set1[i]<>set2[j])THEN
+   sum:= set2[j]+sum ;
+   END_IF
+   END_FOR
+   END_FOR
+   FOR i FROM 0 TO set2.length-1 STEP 1  DO
+   FOR j FROM i TO set&.length-1 STEP 1  DO
+   IF(set1[i]<>set2[j])THEN
+   sum:= set2[i]+sum ;
+   END_IF
+   END_FOR
+   END_FOR
+
+END
